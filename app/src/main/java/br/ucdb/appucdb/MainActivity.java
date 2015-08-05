@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 
@@ -15,17 +16,36 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Carrega o Layout
         setContentView(R.layout.activity_main);
 
-        Button btn =  (Button) findViewById(R.id.btnOK);
+        //Acessa o botao
+        final Button btn =  (Button) findViewById(R.id.btn_ok);
+        //Acessa o campo de texto
+       final EditText edNome = (EditText) findViewById(R.id.ed_nome);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        //Trata o click no botao
+        btn.setOnClickListener(new View.OnClickListener(){
+
             @Override
             public void onClick(View v) {
-                Toast t =  Toast.makeText(MainActivity.this, "Olá ", Toast.LENGTH_LONG );
-                t.show();
+                String texto = edNome.getText().toString();
+                Toast.makeText(MainActivity.this,"Clique CURTO:" + texto, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Trata clique longo no botão
+        btn.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+
+                String texto = edNome.getText().toString();
+                Toast.makeText(MainActivity.this,"Clique LONGO:"+ texto, Toast.LENGTH_SHORT).show();
+
+                return true;
             }
         });
     }
 
 }
+
