@@ -10,6 +10,18 @@
         android:layout_height="wrap_content"
         android:text="TELA 2" />
 
+    <TextView
+        android:id="@+id/tv_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/ed_nome_tela2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <Button
         android:id="@+id/btn_voltar"
         android:layout_width="wrap_content"
