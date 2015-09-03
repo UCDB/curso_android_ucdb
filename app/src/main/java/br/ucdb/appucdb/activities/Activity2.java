@@ -1,4 +1,4 @@
-package br.ucdb.appucdb;
+package br.ucdb.appucdb.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import br.ucdb.appucdb.R;
 
 /**
  * Created by Virmerson on 05/08/15.
