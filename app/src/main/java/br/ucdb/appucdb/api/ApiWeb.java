@@ -20,7 +20,7 @@ import retrofit.http.POST;
 
 public class ApiWeb {
 
-    public static final String BASE_URL = "http://172.31.12.144:8082/crudangular";
+    public static final String BASE_URL = "http://192.168.43.232:8082/crudangular/ws";
 
     public static Rotas rotasApi;
 
