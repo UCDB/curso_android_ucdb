@@ -11,8 +11,10 @@ import retrofit.RestAdapter;
 import retrofit.client.Response;
 import retrofit.converter.GsonConverter;
 import retrofit.http.Body;
+import retrofit.http.DELETE;
 import retrofit.http.GET;
 import retrofit.http.POST;
+import retrofit.http.Path;
 
 /**
  * Created by Virmerson on 02/09/15.
@@ -20,7 +22,7 @@ import retrofit.http.POST;
 
 public class ApiWeb {
 
-    public static final String BASE_URL = "http://192.168.43.232:8082/crudangular/ws";
+    public static final String BASE_URL = "http://192.168.56.1:8082/crudangular/ws";
 
     public static Rotas rotasApi;
 
@@ -54,6 +56,12 @@ public class ApiWeb {
 
         @GET("/cliente/lista")
         public void listaClientes(Callback<List<Cliente>> callback);
+
+
+        @DELETE("/cliente/{id}")
+        public void removeCliente(@Path("id") long id, Callback<Response> callback);
+
+
     }
 
 }
